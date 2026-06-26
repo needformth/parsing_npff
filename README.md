@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project automates the collection, processing, and visualization of pension fund market data.
+This project automates the collection, processing, and reporting of pension fund market data.
 
 It was developed to support analytical reporting for a Russian non-state pension fund (NPF) by eliminating repetitive manual work involved in:
 
@@ -91,6 +91,16 @@ Management Presentation
 
 The first component extracts pension fund statistics from public disclosure websites.
 
+### Example Source
+
+The parser can collect data from publicly available pension fund disclosure pages.
+
+Some sources require browser automation because reporting periods and tables are generated dynamically.
+
+<p align="center">
+  <img src="images/sber_site.png" width="900">
+</p>
+
 ### Features
 
 * Retrieves historical reporting periods.
@@ -99,34 +109,38 @@ The first component extracts pension fund statistics from public disclosure webs
 * Cleans and standardizes indicator names.
 * Extracts measurement units.
 * Consolidates results into Excel workbooks.
-<p align="center">
-  <img src="images/sber_site.png" width="800">
-</p>
 
 ### Output
 
 The module produces structured datasets containing:
 
-* Indicator name;
-* Indicator value;
-* Reporting date;
-* Unit of measurement.
+* Indicator name
+* Indicator value
+* Reporting date
+* Unit of measurement
+
+Example of extracted and standardized data:
+
 <p align="center">
-  <img src="images/data_extracted.png" width="800">
+  <img src="images/data_extracted.png" width="900">
 </p>
 
 ---
-
 ## Module 2: Excel to PowerPoint
 
 The second component converts formatted Excel tables into presentation slides.
 
+### Input Data
+
+The reporting module receives preprocessed market tables and rankings generated during the previous stage.
+
+<p align="center">
+  <img src="images/data_for_pptx.png" width="900">
+</p>
+
 ### Features
 
 * Reads market ranking tables.
-<p align="center">
-  <img src="images/data_for_pptx.png" width="800">
-</p>
 * Automatically identifies selected pension funds.
 * Calculates market positions.
 * Updates slide titles dynamically.
@@ -137,15 +151,17 @@ The second component converts formatted Excel tables into presentation slides.
 
 For each market indicator the system generates:
 
-* Market ranking visualization;
-* Position of selected pension funds;
-* Market share information;
-* Asset and participant statistics.
+* Market ranking visualization
+* Position of selected pension funds
+* Market share information
+* Asset and participant statistics
 
 The output presentation preserves corporate formatting and visual style.
 
+### Example Output
+
 <p align="center">
-  <img src="images/output.png" width="800">
+  <img src="images/output.png" width="900">
 </p>
 
 ---
