@@ -99,6 +99,9 @@ The first component extracts pension fund statistics from public disclosure webs
 * Cleans and standardizes indicator names.
 * Extracts measurement units.
 * Consolidates results into Excel workbooks.
+<p align="center">
+  <img src="images/sber_site.png" width="800">
+</p>
 
 ### Output
 
@@ -108,6 +111,9 @@ The module produces structured datasets containing:
 * Indicator value;
 * Reporting date;
 * Unit of measurement.
+<p align="center">
+  <img src="images/data_extracted.png" width="800">
+</p>
 
 ---
 
@@ -119,7 +125,7 @@ The second component converts formatted Excel tables into presentation slides.
 
 * Reads market ranking tables.
 <p align="center">
-  <img src="images/data_extracted.png" width="800">
+  <img src="images/data_for_pptx.png" width="800">
 </p>
 * Automatically identifies selected pension funds.
 * Calculates market positions.
